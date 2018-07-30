@@ -13,6 +13,7 @@ class BookAdmin(admin.ModelAdmin):
     search_fields = ('id', 'name', 'publish__name')  # 搜索
     list_filter = ('pub_date', 'publish')  # 过滤器
     ordering = ("-price", "id")  # 排序 前面加一个减号为降序
+    #折叠字段
     fieldsets = [
         (None, {'fields': ['name']}),
         ('price information', {'fields': ['price', "publish", "pub_date"], 'classes': ['collapse']}),  # classes:指折叠样式
