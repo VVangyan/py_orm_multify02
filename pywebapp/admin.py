@@ -10,10 +10,11 @@ class BookAdmin(admin.ModelAdmin):
     list_editable = ('name', 'price')
     filter_horizontal = ('authors',)  # 垂直 水平的 搜索  ()filter_vertical =
     list_per_page = 2
-    search_fields = ('id', 'name', 'publish__name')#搜索
-    list_filter = ('pub_date', 'publish')#过滤器
+    search_fields = ('id', 'name', 'publish__name')  # 搜索
+    list_filter = ('pub_date', 'publish')  # 过滤器
 
 
+# Django admin:关于数据库的一个后台管理工具
 # 注册
 admin.site.register(models.Author)
 admin.site.register(models.Publish)
