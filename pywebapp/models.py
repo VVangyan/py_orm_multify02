@@ -23,7 +23,7 @@ from django.db import models
 
 
 class Book(models.Model):
-    name = models.CharField(max_length=20, verbose_name="姓名")  # verbose_name  admin 管理页面上面的别名称
+    name = models.CharField(max_length=20, verbose_name="书名")  # verbose_name  admin 管理页面上面的别名称
     price = models.IntegerField("价格")  # 也可以直接写
     pub_date = models.DateField("日期")
     # 外键 models.ForeignKey("Publish") ,括号中为要关联的那张表，默认关联主键
